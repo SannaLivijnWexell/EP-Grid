@@ -1,0 +1,84 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+}
+
+#img {
+  //display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.ibb.co/55P1d7x/hover.jpg");
+  mix-blend-mode: lighten;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.card {
+  width: 1512px;
+  height: 982px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
+
+.normal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.masked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    transform: scale(1.03);
+    filter: blur(1px);
+    opacity: 0;
+    transform-origin: center center;
+
+    -webkit-mask-image: url('https://res.cloudinary.com/rmkngy/image/upload/v1623231173/mask.png');
+    -webkit-mask-position: center;
+    -webkit-mask-size: 600px;
+    -webkit-mask-repeat: no-repeat;
+  
+    transition: all 0.3s ease-out;
+}
